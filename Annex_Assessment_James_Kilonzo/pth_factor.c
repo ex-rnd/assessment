@@ -1,4 +1,4 @@
-
+// James Kilonzo: pth_factor.c
 #include <stdio.h>
 #include <math.h>
 

@@ -1,0 +1,6 @@
+-- James Kilonzo: top_students.sql
+
+SELECT ID, NAME 
+FROM STUDENT
+ORDER BY SCORE DESC, ID ASC
+LIMIT 3;
