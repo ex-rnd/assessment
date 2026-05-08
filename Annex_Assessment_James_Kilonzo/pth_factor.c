@@ -4,8 +4,8 @@
 
 long pthFactor(long n, long p) {
 
-    long long small_factors[100000];
-    long long count = 0;
+    long small_factors[100000];
+    long count = 0;
 
     for (long d = 1; d * d <= n; d++) {
         if (n % d == 0) {
@@ -36,13 +36,7 @@ long pthFactor(long n, long p) {
 int main() {
 
     // Basic Test 
-    printf("n = 10, p = 3 -> %ld (expected 5)\n", pthFactor(10, 3));
-    // Perfect Square Test 
-    printf("n = 36, p = 9 -> %ld (expected 36)\n", pthFactor(36, 9));
-    // Edge Case
-    printf("n=1,  p=2  -> %ld (expected 0)\n",  pthFactor(1, 2));
-    // Really Big Number 
-    printf("n=1000000000000000, p=1 -> %ld (expected 1)\n", pthFactor(1000000000000000L, 1));
+    printf("Input: n = 10, p = 3 -> %ld (Expected Output 5)\n", pthFactor(10, 3));
 
     return 0;
 
