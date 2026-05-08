@@ -10,7 +10,6 @@
 using namespace std;
 using json = nlohmann::json;
 
-
 // Fetch URL 
 string fetchURL(const string& url) {
     string command = "curl -s \"" + url + "\"";
@@ -83,7 +82,6 @@ vector<string> topArticles(int limit) {
             articles.push_back({name, comments});
         }
     }
-
 
     // Sort 
     sort(articles.begin(), articles.end(), [](const Article& a, const Article& b) {
