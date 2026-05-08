@@ -4,7 +4,9 @@
 
 long pthFactor(long n, long p) {
 
-    long small_factors[100000];
+
+    // Complexity: Reduce O(N) to O(sqrt[N]) by utilizing factor pairing property
+    long small_factors[100000]; // Approximately O(sqrt[N])
     long count = 0;
 
     for (long d = 1; d * d <= n; d++) {
