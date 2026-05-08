@@ -1,12 +1,17 @@
 // James Kilonzo: top_articles.c
 
-#include <bits/stdc++.h>
-
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cstdio>
 #include "nlohmann/json.hpp"
 
 using namespace std;
 using json = nlohmann::json;
 
+
+// Fetch URL 
 string fetchURL(const string& url) {
     string command = "curl -s \"" + url + "\"";
 
@@ -38,6 +43,9 @@ vector<string> topArticles(int limit) {
 
     // Fetch Page 1 
     string first_response = fetchURL(base_url + "1");
+
+    // Check Nullity 
+    if (first_response.empty()) return {};
     json first_json = json::parse(first_response);
 
     int total_pages = first_json["total_pages"];
